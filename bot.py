@@ -35,7 +35,13 @@ TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
 client = discord.Client()
 # channel = client.get_channel(CHANNEL_ID)
 
+# プレイ中のゲームを表示
 presence = discord.Game("大擂台賽")
+
+# アイコンを設定
+with open('kaio.png', 'rb') as f:
+    icon = f.read()
+    await client.edit_server(ctx.message.server, icon=icon) 
 
 @client.event
 async def on_ready():
