@@ -44,16 +44,12 @@ bot = commands.Bot
 async def on_ready():
     print("bot起動!")
     await client.change_presence(activity=presence)
-    # アイコンを設定
-    with open('kaio.png', 'rb') as f:
-        icon = f.read()
-        await bot.edit_server(ctx.message.server, icon=icon) 
 
 @client.event
 async def on_message(message):
     if message.author.bot:
         return
-    if message.content == "!baki" or "@烈海王":
+    if message.content == "!baki" or "@烈海王" or "@もち" or "@ST" or "@juicy" or "@memo":
         await message.channel.send(str(random.choice(l)))
 
 client.run(TOKEN)
