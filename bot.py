@@ -35,14 +35,12 @@ TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
 client = discord.Client()
 # channel = client.get_channel(CHANNEL_ID)
 
-Bot = commands.Bot(
-    command_prefix="!",
-    activity=discord.Game("大擂台賽") 
-)
+presence = discord.Game("大擂台賽")
 
 @client.event
 async def on_ready():
     print("bot起動!")
+    await client.change_presence(activity=presence)
 
 @client.event
 async def on_message(message):
