@@ -38,7 +38,7 @@ client = discord.Client()
 # プレイ中のゲームを表示
 presence = discord.Game("大擂台賽")
 
-
+bot = commands.Bot
 
 @client.event
 async def on_ready():
@@ -47,7 +47,7 @@ async def on_ready():
     # アイコンを設定
     with open('kaio.png', 'rb') as f:
         icon = f.read()
-        await client.edit_server(ctx.message.server, icon=icon) 
+        await bot.edit_server(ctx.message.server, icon=icon) 
 
 @client.event
 async def on_message(message):
