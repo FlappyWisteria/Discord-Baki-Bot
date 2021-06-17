@@ -1,6 +1,7 @@
 # Discord-Baki-Bot
 
 CommandList
+
 !baki
 @烈海王
 
