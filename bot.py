@@ -2,6 +2,7 @@ import random
 
 import discord
 from discord import channel
+from discord.ext import commands
 
 # 烈海王セリフlist
 l = [
@@ -33,6 +34,11 @@ TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
 
 client = discord.Client()
 # channel = client.get_channel(CHANNEL_ID)
+
+Bot = commands.Bot(
+    command_prefix="!",
+    activity=discord.Game("大擂台賽") 
+)
 
 @client.event
 async def on_ready():
