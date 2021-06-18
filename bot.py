@@ -32,7 +32,7 @@ TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
 
 client = discord.Client()
 
-bot = commands.Bot(command_prefix="!")
+bot = commands.Bot(command_prefix="")
 
 # プレイ中のゲームを表示
 presence = discord.Game("大擂台賽")
