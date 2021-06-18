@@ -30,7 +30,7 @@ l = [
 # DiscordToken
 TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
 
-lient = discord.Client()
+client = discord.Client()
 
 # bot = commands.Bot(command_prefix="")
 
