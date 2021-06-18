@@ -46,7 +46,7 @@ async def on_ready():
 async def on_message(message):
     if message.author.bot:
         return
-    if message.content == "!baki" or "@烈海王" or "@もち" or "@ST" or "@juicy" or "@memo":
+    if message.content == "!baki" or "@烈海王":
         await message.channel.send(str(random.choice(l)))
 
 client.run(TOKEN)
