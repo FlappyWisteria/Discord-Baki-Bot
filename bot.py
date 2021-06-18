@@ -2,6 +2,7 @@ import random
 
 import discord
 from discord import channel
+from discord.ext import commands
 
 # 烈海王セリフlist
 l = [
@@ -30,6 +31,8 @@ l = [
 TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
 
 client = discord.Client()
+
+bot = commands.Bot(command_prefix="!")
 
 # プレイ中のゲームを表示
 presence = discord.Game("大擂台賽")
