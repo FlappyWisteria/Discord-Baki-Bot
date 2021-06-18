@@ -35,8 +35,6 @@ client = discord.Client()
 # プレイ中のゲームを表示
 presence = discord.Game("大擂台賽")
 
-bot = commands.Bot
-
 @client.event
 async def on_ready():
     print("bot起動!")
