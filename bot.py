@@ -30,10 +30,7 @@ l = [
 # DiscordToken
 TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
 
-# CHANNEL_ID = "416806603887607820"
-
 client = discord.Client()
-# channel = client.get_channel(CHANNEL_ID)
 
 # プレイ中のゲームを表示
 presence = discord.Game("大擂台賽")
