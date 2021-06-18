@@ -2,7 +2,6 @@ import random
 
 import discord
 from discord import channel
-from discord.ext import commands
 
 # 烈海王セリフlist
 l = [
