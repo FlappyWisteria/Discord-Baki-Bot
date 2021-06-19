@@ -41,6 +41,7 @@ presence = discord.Game("大擂台賽")
 async def on_ready():
     print("bot起動!")
     await client.change_presence(activity=presence)
+    await message.channel.send(str("!bakiで烈海王がしゃべるよ"))
 
 @client.event
 async def on_message(message):
