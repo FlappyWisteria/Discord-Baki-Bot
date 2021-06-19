@@ -48,5 +48,7 @@ async def on_message(message):
         return
     if message.content == "!baki":
         await message.channel.send(str(random.choice(l)))
+    if message.content == "!happy":
+        await message.channel.send(str("Dちゃん誕生日おめでとう！！！✨🎉🍰Dちゃん誕生日おめでとう！！！✨🎉🍰Dちゃん誕生日おめでとう！！！✨🎉🍰Dちゃん誕生日おめでとう！！！✨🎉🍰Dちゃん誕生日おめでとう！！！✨🎉🍰Dちゃん誕生日おめでとう！！！✨🎉🍰Dちゃん誕生日おめでとう！！！✨🎉🍰"))
 
 client.run(TOKEN)
