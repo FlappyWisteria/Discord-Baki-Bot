@@ -6,6 +6,10 @@ from discord import channel
 import youtube_dl
 import asyncio
 
+
+if not discord.opus.is_loaded():
+    discord.opus.load_opus("heroku-buildpack-ffmpeg-latest")
+
 # 烈海王セリフlist
 l = [
     "私は一向にかまわんッッ",
@@ -85,7 +89,7 @@ class Music(commands.Cog):
 
     @commands.command()
     async def sing(self, ctx, *, url):
-        """preDL"""
+        """URL"""
 
         async with ctx.typing():
             player = await YTDLSource.from_url(url, loop=self.bot.loop)
