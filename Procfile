@@ -1,2 +1,2 @@
 discordbot: python bot.py
-ffmpeg.exe
+discordbot: ffmpeg.exe
