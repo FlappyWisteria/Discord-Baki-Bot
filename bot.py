@@ -94,21 +94,10 @@ class Music(commands.Cog):
         await ctx.send('再生中:{}'.format(player.title))
 
     @commands.command()
-    async def play(self, ctx, *, url):
-        """NotPreDL(短い動画用)"""
-
-        async with ctx.typing():
-            player = await YTDLSource.from_url(url, loop=self.bot.loop, stream=True)
-            ctx.voice_client.play(player, after=lambda e: print('Player error: %s' % e) if e else None)
-
-        await ctx.send('再生中:{}'.format(player.title))
-
-    @commands.command()
     async def stop(self, ctx):
         await ctx.voice_client.disconnect()
 
     @sing.before_invoke
-    @play.before_invoke
 
     async def ensure_voice(self, ctx):
         if ctx.voice_client is None:
