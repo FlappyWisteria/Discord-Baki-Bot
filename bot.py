@@ -85,7 +85,7 @@ class Music(commands.Cog):
 
     @commands.command()
     async def sing(self, ctx, *, url):
-        """Plays from a url (almost anything youtube_dl supports)"""
+        """preDL"""
 
         async with ctx.typing():
             player = await YTDLSource.from_url(url, loop=self.bot.loop)
@@ -95,7 +95,7 @@ class Music(commands.Cog):
 
     @commands.command()
     async def play(self, ctx, *, url):
-        """Streams from a url (same as yt, but doesn't predownload)"""
+        """NotPreDL(短い動画用)"""
 
         async with ctx.typing():
             player = await YTDLSource.from_url(url, loop=self.bot.loop, stream=True)
