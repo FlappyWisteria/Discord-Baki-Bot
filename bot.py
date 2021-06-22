@@ -6,9 +6,7 @@ from discord import channel
 import youtube_dl
 import asyncio
 
-if not discord.opus.is_loaded(): 
-    #もし未ロードだったら
-    discord.opus.load_opus("heroku-buildpack-ffmpeg-latest")
+
 
 # 烈海王セリフlist
 l = [
