@@ -6,7 +6,9 @@ from discord import channel
 import youtube_dl
 import asyncio
 
-
+if not discord.opus.is_loaded(): 
+    #もし未ロードだったら
+    discord.opus.load_opus("heroku-buildpack-ffmpeg-latest")
 
 # 烈海王セリフlist
 l = [
@@ -44,13 +46,12 @@ ytdl_format_options = {
     'restrictfilenames': True,
     'noplaylist': True,
     'nocheckcertificate': True,
-    'ignoreerrors': False,
-    'logtostderr': False,
+    'ignoreerrors': True,
+    'logtostderr': True,
     'quiet': True,
     'no_warnings': True,
     'default_search': 'auto',
-    'source_address': '0.0.0.0',
-    "download": "./tmp"# bind to ipv4 since ipv6 addresses cause issues sometimes
+    'source_address': '0.0.0.0'# bind to ipv4 since ipv6 addresses cause issues sometimes
 }
 
 ffmpeg_options = {
