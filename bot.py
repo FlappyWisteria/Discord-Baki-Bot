@@ -4,6 +4,7 @@ import discord
 from discord.ext import commands
 from discord import channel
 import asyncio
+import os
 
 
 
@@ -33,7 +34,7 @@ l = [
     ]
 
 # DiscordToken
-TOKEN = "TOKEN"
+TOKEN = os.environ["TOKEN"]
 
 bot = commands.Bot(
     command_prefix="!",
@@ -51,8 +52,8 @@ async def happy(ctx):
 
 @bot.event
 async def on_ready():
-    print("RUN")
+    print('Logged in as {0} ({0.id})'.format(bot.user))
     print('------')
 
 
-bot.run("TOKEN")
+bot.run(TOKEN)
