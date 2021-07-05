@@ -28,7 +28,7 @@ l = [
     ]
 
 # DiscordToken
-TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
+TOKEN = "TOKEN"
 
 client = discord.Client()
 
