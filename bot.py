@@ -1,8 +1,12 @@
 import random
 
 import discord
-from discord import channel
 from discord.ext import commands
+from discord import channel
+import youtube_dl
+import asyncio
+
+
 
 # 烈海王セリフlist
 l = [
@@ -32,25 +36,24 @@ l = [
 # DiscordToken
 TOKEN = "TOKEN"
 
-client = discord.Client()
+bot = commands.Bot(
+    command_prefix="!",
+    case_insensitive=True,
+    activity=discord.Game("大擂台賽")
+    )
 
-# bot = commands.Bot(command_prefix="")
+@bot.command()
+async def baki(ctx):
+    await ctx.send(str(random.choice(l)))
 
-# プレイ中のゲームを表示
-presence = discord.Game("大擂台賽")
+@bot.command()
+async def happy(ctx):
+    await ctx.send(str("誕生日は終わったよ !bakiで烈海王がしゃべるよ"))
 
-@client.event
+@bot.event
 async def on_ready():
-    print("bot起動!")
-    await client.change_presence(activity=presence)
+    print('Logged in as {0} ({0.id})'.format(bot.user))
+    print('------')
 
-@client.event
-async def on_message(message):
-    if message.author.bot:
-        return
-    if message.content == "!baki":
-        await message.channel.send(str(random.choice(l)))
-    if message.content == "!happy":
-        await message.channel.send(str("誕生日は終わったよ !bakiで烈海王がしゃべるよ"))
 
-client.run(TOKEN)
+bot.run(TOKEN)
