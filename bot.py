@@ -5,7 +5,7 @@ from discord.ext import commands
 from discord import channel
 import youtube_dl
 import asyncio
-
+import os
 
 
 # 烈海王セリフlist
@@ -34,7 +34,7 @@ l = [
     ]
 
 # DiscordToken
-TOKEN = "TOKEN"
+TOKEN = os.environ["TOKEN"]
 
 bot = commands.Bot(
     command_prefix="!",
