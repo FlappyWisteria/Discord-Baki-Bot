@@ -34,7 +34,7 @@ l = [
     ]
 
 # DiscordToken
-TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
+TOKEN = "TOKEN"
 
 bot = commands.Bot(
     command_prefix="!",
