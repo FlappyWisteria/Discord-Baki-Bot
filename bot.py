@@ -24,11 +24,12 @@ l = [
     "まだ１分には数秒残してる…………　どうだ　まだ継続けるか",
     "「黄河は水たまりを叱りはしない」という　ことわざがあるが私の考えは違う",
     "自己の意を貫き通す力　我儘を押し通す力　私にとって強さとはそういうものです",
-    "復ッ活ッ"
+    "復ッ活ッ",
+    "w",
     ]
 
 # DiscordToken
-TOKEN = "ODU0OTk2NTgzNzQwMzQyMzEz.YMsDng.quevtXKLwfFzYwvtqggvfLAS57U"
+TOKEN = "TOKEN"
 
 client = discord.Client()
 
