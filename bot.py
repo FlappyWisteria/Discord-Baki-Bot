@@ -33,6 +33,14 @@ l = [
     "このタヌキが...."
     ]
 
+l_2 = [
+    "VALORANT",
+    "OW",
+    "ポケモンLOL",
+    "コードネーム",
+    "ゴッドフィールド",
+]
+
 # DiscordToken
 TOKEN = os.environ["TOKEN"]
 
@@ -46,6 +54,11 @@ bot = commands.Bot(
 async def baki(ctx):
     await ctx.send(str(random.choice(l)))
 
+@bot.command()
+async def gatya(ctx):
+    await ctx.send(str(random.choice(l_2)))
+
+    
 @bot.command()
 async def happy(ctx):
     await ctx.send(str("誕生日は終わったよ !bakiで烈海王がしゃべるよ"))
