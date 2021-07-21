@@ -36,10 +36,10 @@ l = [
 l_2 = [
     "VALORANT",
     "OW",
+    "LからはじまるD2",
     "ポケモンLOL",
-    "コードネーム",
-    "ゴッドフィールド",
-]
+    "ゴッドフィールドor(ボードゲーム)",
+    ]
 
 # DiscordToken
 TOKEN = os.environ["TOKEN"]
